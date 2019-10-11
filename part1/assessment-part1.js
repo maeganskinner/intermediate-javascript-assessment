@@ -45,26 +45,39 @@ function daBears(){
 
 var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
+
+answer: var fairyTale1 = ["papaBear", "mamaBear"];
+
+
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
 
+
 var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+
+answer: var fairyTale2 = ["goldilocks"];
+
 
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
 var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
+answer: var fairyTale3 = ["mamaBear"];
+
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
 var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+
+answer: var fairyTale4 = ["daBears", "papaBear", "mamaBear", "goldilocks"];
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
 var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
+answer: var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear"];
 
 // *************
 // * PROBLEM 2 *
@@ -81,8 +94,19 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 // the other called "mustang".  Using implicit context, invoke the drive method on
 // "charger" once, and invoke it twice on "mustang".
 
-// CODE HERE...
+function Vehicle(){
+  this.gasRemaining = 100;
+  
+}
+Vehicle.prototype.drive = function(){
+    this.gasRemaining = this.gasRemaining - 25;
+}
+var charger = new Vehicle();
+var mustang = new Vehicle();
 
+charger.drive();
+mustang.drive();
+mustang.drive();
 
 
 
@@ -106,8 +130,15 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 
 
+ 
+var letter = 
+function grammarPolice () {
+  if (A >= A, B >= B, C >= C, D >= D, E <= E, F >= F, G >= G, H >= H, I >= I, J >= J, K >= K,L >= L, M >= M, N >= N, O >= O, P >= P, Q >= Q, R >= R, S >= S, T >= T, U >= U, V >= V, W >= W, X >= X, Y >= Y, Z >= Z  )
 
-// CODE HERE...
+    return (A >= a, B >= b, C >= c, D >= d, E <= e, F >= f, G >= g, H >= h, I >= i, J >= j, K >= k, L >= l, M >= m, N >= n, O >= o, P >= p, Q >= q, R >= r, S >= s, T >= t, U >= u, V >= v, W >= w, X >= x, Y >= y, Z >= z )
+
+  console.log( grammarPolice )
+} 
 
 
 
@@ -141,3 +172,11 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 var theAnswer = "Unknown";
 
 // CODE HERE...
+
+function promiseCatcher (param) {
+    param.then(function(result){
+      theAnswer = result;
+      console.log(result);
+      return result;
+    });
+  }

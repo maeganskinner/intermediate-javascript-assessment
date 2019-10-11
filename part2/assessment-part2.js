@@ -5,12 +5,12 @@
 // * PROBLEM 1 *
 // *************
 
-// Below are two variables (firstUser and thirdUser).
-// Under the variables is a function called noWeakLink.
-// noWeakLink uses $http to make a "GET" request to /api/users.
-// You must use two .then functions to handle the response object.
-// Chain these functions off of $http (do not put them in variables)
-// The response object will look like this :
+ Below are two variables (firstUser and thirdUser).
+ Under the variables is a function called noWeakLink.
+ noWeakLink uses $http to make a "GET" request to /api/users.
+ You must use two .then functions to handle the response object.
+ Chain these functions off of $http (do not put them in variables)
+ The response object will look like this :
 /*
     {
       data: [
@@ -43,8 +43,12 @@ function noWeakLink() {
     method: 'GET',
     url: '/api/users'
   })
-  // CODE HERE...
-
+  .then(
+    res => {
+      firstUser = res[0]
+      }).then( res => {
+           thirdUser = res[2]
+        })
 }
 
 
@@ -73,7 +77,7 @@ function large() {
 
   return 'My name is ' + this.name + ' and I am very heavy!'
 }
-// CODE HERE...
+
 
 
 
